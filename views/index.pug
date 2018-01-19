@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    script(src='/javascripts/socket.io.js')
+    script(src='/javascripts/jquery.js')
+    script(src='/javascripts/index.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div#header
+      h1= title
+      h2.ActiveTeam#teamleft Team Left
+      h2.ActiveTeam#teamright Team Right
+    ul#teams
+    

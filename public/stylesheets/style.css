@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 13px Helvetica, Arial;
+}
+
+#header {
+  background: rgb(51, 51, 51);
+  padding: 3px;
+  top: 0;
+  width: 100%;
+}
+
+#teams {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#teams li {
+  padding: 5px 10px;
+}
+#teams li:nth-child(odd) {
+  background: #eee;
+}
