@@ -1,0 +1,21 @@
+{
+  "active": ["Sensei", "John"],
+  "teams": {
+    "Sensei": {
+      "Points": 0
+
+    },
+    "John": {
+      "Points": 0
+
+    },
+    "Harmons": {
+      "Points": 0
+
+    },
+    "Swagalicious": {
+      "Points": 0
+
+    }
+  }
+}
