@@ -4,8 +4,8 @@ var socket = io()
 socket.on('Info', (Info) => {
   info = Info
   $('#teams').empty()
-  $('#teamleft').html(`<img href="/images/icons/${info.active[0]}.png"/> ` + info.active[0])
-  $('#teamright').html(info.active[1] + ` <img href="/images/icons/${info.active[1]}.png"/>`)
+  $('#teamleft').html(`<img src="/images/icons/${info.active[0]}.png"/> ` + info.active[0])
+  $('#teamright').html(info.active[1] + ` <img src="/images/icons/${info.active[1]}.png"/>`)
 
   Object.keys(info.teams).forEach((name) => {
     let teamInfo = info.teams[name]
