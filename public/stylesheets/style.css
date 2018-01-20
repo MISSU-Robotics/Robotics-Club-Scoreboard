@@ -9,15 +9,20 @@ body {
 }
 
 #header {
-  background: rgb(51, 51, 51);
+  background: DimGrey;
   padding: 2em;
-  color: white;
+  color: WhiteSmoke;
   font-size: 3em;
 }
 
 .ActiveTeam {
   display: inline-block;
   position: absolute;
+}
+
+.ActiveTeam img {
+  height: 1em;
+  width: 1em;
 }
 
 #teamleft {
@@ -52,4 +57,22 @@ body {
 
 .teamPoints {
   right: 0px;
+}
+
+footer {
+  background-color: DimGrey;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 1em 0;
+}
+
+footer > p {
+  padding: 1em 0;
+  color: WhiteSmoke;
+}
+
+footer * {
+  display: flex;
+  justify-content: center;
 }

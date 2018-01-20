@@ -2,6 +2,7 @@ doctype html
 html
   head
     title= title
+    script(async='', defer='', src='https://buttons.github.io/buttons.js')
     script(src='/javascripts/socket.io.js')
     script(src='/javascripts/jquery.js')
     script(src='/javascripts/index.js')
@@ -11,4 +12,7 @@ html
       h1.ActiveTeam#teamleft
       h1.ActiveTeam#teamright
     ul#teams
-    
+    footer
+      p Made by Jeffrey Harmon
+      div
+        a.github-button(href='https://github.com/rey2952/Robotics-Club-Scoreboard', data-size='large', data-show-count='true', aria-label='Star rey2952/Robotics-Club-Scoreboard on GitHub') Star
