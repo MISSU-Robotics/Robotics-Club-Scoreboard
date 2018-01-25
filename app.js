@@ -15,6 +15,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res) => {
   res.render('index')
 })
+app.get('/admin', (req, res) => {
+  res.render('admin')
+})
 
 
 // Socket IO Stuff
@@ -24,6 +27,9 @@ io.on('connection', (socket) => {
   socket.emit('Info', Info)
   socket.on('disconnect', () => {
     console.log('user disconnected')
+  })
+  socket.on('Change Points', (info) => {
+    console.log(info)
   })
 })
 
