@@ -17,23 +17,23 @@ socket.on('Info', (Info) => {
     teamPoints.append($('<span>').addClass('removePoints').addClass('changePoints').text('-'))
     teamPoints.append($('<span>').addClass('Points').text(teamInfo.Points))
     teamPoints.append($('<span>').addClass('addPoints').addClass('changePoints').text('+'))
-  })
 
-  console.log($('.changePoints'))
-  $('.changePoints').each().on('click', () => {
-    console.log('CLICK')
-    if ($(this).hasClass('addPoints')) {
-      socket.emit('Change Points', {
-        'ID': $(this).parent().parent().attr('id'),
-        'value': 1
-      })
-      console.log(+1)
-    } else if ($(this).hasClass('removePoints')) {
-      socket.emit('Change Points', {
-        'ID': $(this).parent().parent().attr('id'),
-        'value': -1
-      })
-      console.log(1)
-    }
+    $('.changePoints').on('click', (event) => {
+      if ($(event.target).hasClass('addPoints')) {
+        socket.emit('Change Points', {
+          'ID': $(event.target).parent().parent().attr('id'),
+          'value': 1
+        })
+        console.log('+1')
+      } else if ($(event.target).hasClass('removePoints')) {
+        if ($(event.target).parent().children('.Points').text() > 0) {
+          socket.emit('Change Points', {
+            ID: $(event.target).parent().parent().attr('id'),
+            value: -1
+          })
+          console.log('-1')
+        }
+      }
+    })
   })
 })

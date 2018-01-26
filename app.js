@@ -29,7 +29,8 @@ io.on('connection', (socket) => {
     console.log('user disconnected')
   })
   socket.on('Change Points', (info) => {
-    console.log(info)
+    Info.teams[info.ID].Points += info.value
+    io.emit('Info', Info)
   })
 })
 
